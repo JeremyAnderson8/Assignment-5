@@ -11,9 +11,16 @@ int main(int argc, char** argv){
   while(running){
     cout << "Welcome To Database: " << endl;
     cout << "Enter Number Of Option You Would Like To Select" << endl;
+    cout << "1. Print Students" << endl;
+    cout << "2. Print Faculty" << endl;
     cout << "7. Enter New Student" << endl;
+    cout  << "9. Enter New Faculty" endl;
 
     cin >> userOption;
+
+    if(userOption == 1){
+      masterStu->printStudents(masterStu->studentTree->root);
+    }
 
     if(userOption == 7){
       int id = 0;

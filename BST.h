@@ -85,23 +85,13 @@ BST<T>::~BST(){
 
 
 template <typename T>
-
-
-
 void BST<T>::printTree(TreeNode<T> *node){
-
   if(node==NULL){
-
     return;
-
   }
-
   printTree(node->left);
-
   cout << node->key << endl;
-
   printTree(node->right);
-
 }
 
 
@@ -143,7 +133,6 @@ bool BST<T>::isEmpty(){
 template <typename T>
 void BST<T>::insert(T value){
   TreeNode<T> *node = new TreeNode<T>(value); // value is also the key
-  cout << value << endl;
   if(root == NULL){
     // we have an empty Tree
     root = node;

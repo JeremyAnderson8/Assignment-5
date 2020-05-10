@@ -13,3 +13,12 @@ void MasterStudent::addStudent(Student* student){
   studentTree->insert(student);
   cout << "Student Added" << endl;
 }
+
+void MasterStudent::printStudents(TreeNode<Student*>* node){
+  if(node==NULL){
+    return;
+  }
+  studentTree->printTree(node->left);
+  cout << node->key << endl;
+  studentTree->printTree(node->right);
+}

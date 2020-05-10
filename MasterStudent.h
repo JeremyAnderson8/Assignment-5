@@ -9,6 +9,7 @@ class MasterStudent{
     ~MasterStudent();
     BST<Student*> *studentTree;
     void addStudent(Student* student);
+    void printStudents(TreeNode<Student*>* node);
   private:
     Student* student;
 };
