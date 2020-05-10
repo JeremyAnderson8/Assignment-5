@@ -123,97 +123,54 @@ TreeNode<T>* BST<T>::getMax(){
 
 
 template <typename T>
-
 TreeNode<T>* BST<T>::getMin(){
-
   TreeNode<T> *curr = root;//start at root
 
-
-
   if(root == NULL){
-
     return NULL; // tree is empty
-
   }
-
   while(curr->left != NULL){
-
     curr = curr->left;
-
   }
-
   return curr; // curr->key
-
 }
-
-
 
 template <typename T>
 bool BST<T>::isEmpty(){
   return (root == NULL);
 }
 
-
-
 template <typename T>
-
-
-
 void BST<T>::insert(T value){
   TreeNode<T> *node = new TreeNode<T>(value); // value is also the key
+  cout << value << endl;
   if(root == NULL){
     // we have an empty Tree
     root = node;
   }
   else{
     //tree is not empty, need to find location
-
     TreeNode<T> *curr = root;
-
     TreeNode<T> *parent; //empty node
-
-
-
     while(true){
-
       //let's find the insertion point
-
       parent = curr;
-
-
-
       if(value < curr->key){
-
         //go left
-
         curr = curr->left;
-
         if(curr == NULL){
-
           parent->left = node;
-
           break;
-
         }
-
       }
-
       //go left
-
       curr = curr->right;
-
       if(curr==NULL){
-
         parent->right = node;
-
         break;
-
       }
-
     }
-
   }
-
 }
 
 
