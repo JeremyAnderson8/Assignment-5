@@ -14,7 +14,8 @@ int main(int argc, char** argv){
     cout << "1. Print Students" << endl;
     cout << "2. Print Faculty" << endl;
     cout << "7. Enter New Student" << endl;
-    cout  << "9. Enter New Faculty" endl;
+    cout << "8. Delete A Student" << endl;
+    cout  << "9. Enter New Faculty" << endl;
 
     cin >> userOption;
 
@@ -50,6 +51,16 @@ int main(int argc, char** argv){
 
       Student *newStudent = new Student(id, name, grade, major, gpa, advisorID);
       masterStu->addStudent(newStudent);
+
+    }
+
+    else if(userOption == 8){
+      int id = 0;
+      cout << "Enter ID Of Student To Be Deleted: " << endl;
+      cin >> id;
+      Student *newStudent = new Student();
+      newStudent->setID(id);
+      masterStu->deleteStudent(newStudent);
 
     }
   }

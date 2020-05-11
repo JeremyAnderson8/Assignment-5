@@ -22,3 +22,8 @@ void MasterStudent::printStudents(TreeNode<Student*>* node){
   cout << node->key << endl;
   studentTree->printTree(node->right);
 }
+
+void MasterStudent::deleteStudent(Student* student){
+  studentTree->deleteNode(student);
+  cout << "Student Deleted" << endl;
+}
