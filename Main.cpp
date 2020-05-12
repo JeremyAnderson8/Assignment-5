@@ -1,4 +1,3 @@
-#include "Faculty.h"
 #include "MasterStudent.h"
 
 int main(int argc, char** argv){
@@ -15,7 +14,9 @@ int main(int argc, char** argv){
     cout << "2. Print Faculty" << endl;
     cout << "7. Enter New Student" << endl;
     cout << "8. Delete A Student" << endl;
-    cout  << "9. Enter New Faculty" << endl;
+    cout << "9. Enter New Faculty" << endl;
+    cout << "10. Delete Faculty" << endl;
+    cout << "11. Exit The Database" << endl;
 
     cin >> userOption;
 
@@ -23,7 +24,7 @@ int main(int argc, char** argv){
       masterStu->printStudents(masterStu->studentTree->root);
     }
 
-    if(userOption == 7){
+    else if(userOption == 7){
       int id = 0;
       string name = "";
       string grade = "";
@@ -61,7 +62,11 @@ int main(int argc, char** argv){
       Student *newStudent = new Student();
       newStudent->setID(id);
       masterStu->deleteStudent(newStudent);
+    }
 
+    else if(userOption == 11){
+      cout << "Exiting Program" << endl;
+      break;
     }
   }
 }

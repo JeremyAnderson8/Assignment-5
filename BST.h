@@ -1,16 +1,7 @@
 #include <iostream>
-
 using namespace std;
-
 #include "TreeNode.h"
-
-
-
 template <typename T>
-
-
-
-
 
 class BST{
 
